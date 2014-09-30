@@ -8,7 +8,8 @@ var express         = require('express'),
     bodyParser      = require('body-parser'),
     NeuralN         = require('neuraln');
 
-var routes = require('./routes/index');
+var routes      = require('./routes/index'),
+    experiments = require('./routes/experiments');
 
 
 var app = express();
@@ -22,9 +23,11 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/', experiments);
 
 
 /// catch 404 and forward to error handler

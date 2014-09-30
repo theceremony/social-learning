@@ -13,6 +13,9 @@
     "body-parser": "~1.0.0",
     "debug": "~0.7.4",
     "jade": "~1.3.0",
-    "neuraln":"latest"
+    "neuraln": "latest"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.8"
   }
 }
